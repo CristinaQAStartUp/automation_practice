@@ -31,7 +31,7 @@ public class MyFirstTest {
         driver.quit();
     }
 
-    @Test(timeout = 5000l)
+    @Test/*(timeout = 5000l)*/
     public void verifyFirstTipIsCorrectlyUpdatedAfterEnteringNewQuery() {
         driver.findElement(By.id("search_query_top"))
                 .clear();
@@ -46,7 +46,7 @@ public class MyFirstTest {
 
         WebElement fifthTip = (new WebDriverWait(driver, 10))
                 .until(CustomExpectedConditions.listNthElementHasText(
-                        By.xpath("//*[@id=\"index\"]/div[2]/ul/li"), 4,"Dress"
+                        By.xpath("//*[@id=\"index\"]/div[2]/ul/li"), 4,"Dress1"
                 ));
     }
 }
